@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { TopicCategory } from "@/lib/verses";
 import {
@@ -17,6 +18,7 @@ import {
   FolderOpen,
   Zap,
   FileText,
+  Table2,
 } from "lucide-react";
 
 const FIXED_NAV = [
@@ -24,6 +26,7 @@ const FIXED_NAV = [
   { id: "about", label: "About", icon: Info },
   { id: "features", label: "Features & Functions", icon: Zap },
   { id: "verse-sample", label: "Verse sample", icon: FileText },
+  { id: "comparison", label: "Comparison chart", icon: Table2 },
   { id: "footer", label: "Footer", icon: FileText },
 ];
 
@@ -360,6 +363,32 @@ export default function LandingPage({ topics }: Props) {
               &ldquo;Seventy weeks are determined upon thy people and upon thy holy city, to finish
               the transgression, and to make an end of sins…&rdquo;
             </blockquote>
+          </div>
+        </section>
+
+        {/* Comparison chart — Paul's Epistles vs outside */}
+        <section
+          id="comparison"
+          ref={setRef("comparison")}
+          className="px-6 sm:px-10 lg:px-14 py-16 scroll-mt-24"
+        >
+          <h2 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-2">
+            <Table2 className="h-7 w-7 text-[var(--accent)]" />
+            Paul&apos;s Epistles &amp; the Word
+          </h2>
+          <p className="text-foreground/70 mb-6 max-w-2xl">
+            A comparison of key themes: faith in Jesus Christ, atonement and new birth, and how
+            Paul&apos;s epistles relate to the rest of Scripture (Korean).
+          </p>
+          <div className="rounded-2xl border-2 border-foreground/15 bg-foreground/[0.03] dark:bg-foreground/[0.06] overflow-hidden shadow-lg relative">
+            <Image
+              src="/images/paul-epistles-comparison.png"
+              alt="Theological comparison: Outside Paul's Epistles, Believing in Jesus' Atonement and Being Born Again, and Paul's Epistles — faith in Jesus Christ and related doctrines in Korean"
+              width={1200}
+              height={800}
+              className="w-full h-auto object-contain"
+              priority={false}
+            />
           </div>
         </section>
 

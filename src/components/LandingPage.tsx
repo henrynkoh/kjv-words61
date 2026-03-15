@@ -34,6 +34,8 @@ const FEATURES = [
     desc: "From Bible inspiration to understanding the Word. One place for all.",
     color: "from-violet-500 to-purple-600",
     bg: "bg-violet-500/10 dark:bg-violet-500/20",
+    href: "#topics",
+    ariaLabel: "Go to Topics & Categories — all 24 topics with Bible verses",
   },
   {
     icon: Globe,
@@ -41,6 +43,8 @@ const FEATURES = [
     desc: "Each verse has a theme and Korean or English summary for sharing.",
     color: "from-cyan-500 to-blue-600",
     bg: "bg-cyan-500/10 dark:bg-cyan-500/20",
+    href: "#verse-sample",
+    ariaLabel: "Go to Verse sample — see KJV with Korean summary and full text",
   },
   {
     icon: Sparkles,
@@ -48,6 +52,8 @@ const FEATURES = [
     desc: "Pick by audience, situation, and level of Bible knowledge.",
     color: "from-amber-500 to-orange-600",
     bg: "bg-amber-500/10 dark:bg-amber-500/20",
+    href: "#topics",
+    ariaLabel: "Go to Topics — pick verses by audience, situation, and knowledge level",
   },
   {
     icon: Heart,
@@ -55,6 +61,8 @@ const FEATURES = [
     desc: "No sign-up. Use for study, teaching, or sharing truth.",
     color: "from-rose-500 to-pink-600",
     bg: "bg-rose-500/10 dark:bg-rose-500/20",
+    href: "#hero",
+    ariaLabel: "Go to Home — key verse 2 Timothy 2:15 and getting started",
   },
 ];
 
@@ -308,9 +316,11 @@ export default function LandingPage({ topics }: Props) {
           </p>
           <div className="grid gap-6 sm:grid-cols-2 max-w-5xl">
             {FEATURES.map((f) => (
-              <div
+              <a
                 key={f.title}
-                className={`flex gap-4 rounded-2xl border border-foreground/10 bg-background p-6 ${f.bg} hover:border-foreground/20 hover:shadow-lg transition-all duration-200`}
+                href={f.href}
+                aria-label={f.ariaLabel}
+                className={`flex gap-4 rounded-2xl border border-foreground/10 bg-background p-6 ${f.bg} hover:border-foreground/25 hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2`}
               >
                 <div
                   className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${f.color} text-white shadow-lg`}
@@ -321,7 +331,7 @@ export default function LandingPage({ topics }: Props) {
                   <h3 className="text-lg font-semibold text-foreground">{f.title}</h3>
                   <p className="mt-2 text-sm text-foreground/75">{f.desc}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>

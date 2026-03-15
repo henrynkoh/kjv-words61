@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTopic } from "@/lib/verses";
 import VerseCard from "@/components/VerseCard";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BookOpen } from "lucide-react";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -14,14 +14,23 @@ export default async function TopicPage({ params }: Props) {
   if (!topic) notFound();
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        All topics
-      </Link>
+    <div className="min-h-screen bg-background">
+      <header className="sticky top-0 z-10 border-b border-foreground/10 bg-background/95 backdrop-blur">
+        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 font-semibold text-foreground hover:opacity-90">
+            <BookOpen className="h-5 w-5 text-[var(--accent)]" />
+            KJV Words
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            All topics
+          </Link>
+        </div>
+      </header>
+      <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
       <header>
         <h1 className="text-2xl font-bold text-foreground">{topic.title}</h1>
         {topic.description && (
@@ -38,6 +47,7 @@ export default async function TopicPage({ params }: Props) {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }

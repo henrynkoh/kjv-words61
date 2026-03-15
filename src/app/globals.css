@@ -37,14 +37,22 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Scrollable sidebar - thin scrollbar */
+/* Scrollable sidebar - thin, visible scrollbar */
 .scrollbar-thin {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
 }
 
 @media (prefers-color-scheme: dark) {
   .scrollbar-thin {
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
   }
+}
+
+/* Smooth focus for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

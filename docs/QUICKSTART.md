@@ -30,8 +30,8 @@ In your browser: **http://localhost:3000**
 
 ## What you’ll see
 
-- **Home** — List of 8 topics (Creation & Redemption, Faith & Holy Spirit, Tradition & Law, etc.).
-- **Topic page** — Click a topic to see KJV verses with Korean summaries. Use them for sharing, teaching, or personal study.
+- **Home** — List of **24 topics** (Bible inspiration, Attributes of God, Faith, Salvation, Satan, Death & eternity, Prayer, Understanding the Word, and more).
+- **Topic page** — Click any topic to see KJV verses with theme and Korean/English summaries. Use them for sharing, teaching, or personal study.
 
 ## Build for production
 

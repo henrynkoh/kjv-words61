@@ -41,7 +41,7 @@ You should see something like:
 
 1. Open a browser.
 2. Go to **http://localhost:3000**.
-3. You should see the home page: “Rightly Dividing the Word of Truth” and a list of topics.
+3. You should see the home page: “Rightly Dividing the Word of Truth” and a list of **24 topics**.
 
 ---
 
@@ -49,28 +49,29 @@ You should see something like:
 
 ### Step 2.1 — Browse topics
 
-On the home page you’ll see 8 topic cards, for example:
+On the home page you’ll see **24 topic cards**, for example:
 
-- Creation & Redemption  
-- Faith, Belief & Holy Spirit  
-- Tradition, Law & True Worship  
-- … and more  
+- How do we know the Bible is really the inspired word of God?
+- What are the attributes of God?
+- What is faith?
+- What is the only way to be saved during this present age of grace?
+- … and 20 more
 
 Each card shows a short description and how many verses it has.
 
 ### Step 2.2 — Open a topic
 
-1. Click **“Creation & Redemption”** (or any topic).
-2. The URL will change to something like `/topic/creation-redemption`.
+1. Click **“How do we know the Bible is really the inspired word of God?”** (or any topic).
+2. The URL will change to something like `/topic/bible-inspired-word-of-god`.
 3. You’ll see the topic title, description, and a list of verse cards.
 
 ### Step 2.3 — Read a verse card
 
 Each card has:
 
-- **Theme** — e.g. “Creation through Him”
-- **Korean** — e.g. “이 세상 모든 것은 그가 없이는 창조된 것이 없다”
-- **Reference** — e.g. “John 1:3”
+- **Theme** — e.g. “Seventy weeks determined upon thy people and Jerusalem”
+- **Korean** (or English) — summary of the verse
+- **Reference** — e.g. “Daniel 9:24”
 - **KJV text** — full verse in quotes
 
 Use these to choose verses for different people and situations.
@@ -83,8 +84,8 @@ Click **“All topics”** at the top of the topic page to return to the home pa
 
 ## Part 3: Try another topic (optional)
 
-1. From the home page, click **“Daily Walk & Provision”**.
-2. You’ll see verses about the narrow way, seeking the kingdom, thanksgiving, and walking in the Spirit.
+1. From the home page, click **“How should we pray?”**.
+2. You’ll see verses about thanksgiving, requests, peace of God, and praying in Jesus’ name.
 3. Click **“All topics”** again to return.
 
 ---
@@ -105,8 +106,8 @@ Then open **http://localhost:3000** again. The app will run in production mode.
 ## What you’ve learned
 
 - You installed dependencies and started the dev server.
-- You opened the app and saw the topic list.
-- You opened a topic and read verses (theme, Korean, reference, KJV).
+- You opened the app and saw the **24-topic** list.
+- You opened a topic and read verses (theme, Korean/English, reference, KJV).
 - You navigated back to the topic list.
 - Optionally, you ran a production build.
 
@@ -114,6 +115,6 @@ Then open **http://localhost:3000** again. The app will run in production mode.
 
 ## Next steps
 
-- **Manual** — [MANUAL.md](MANUAL.md): full description of topics, pages, and project structure.
+- **Manual** — [MANUAL.md](MANUAL.md): full description of all 24 topics, pages, and project structure.
 - **Quick start** — [QUICKSTART.md](QUICKSTART.md): minimal steps to run the app.
-- **Promo copy** — [ADS.md](ADS.md): ready-made text for Facebook, Instagram, blogs, newsletter, and email.
+- **Promo copy** — [ADS.md](ADS.md): ready-made text for Facebook, Instagram, Threads, blogs, newsletter, and email.

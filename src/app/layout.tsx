@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { BookOpen } from "lucide-react";
-import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,24 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
-        <header className="border-b border-foreground/10 bg-background/80 backdrop-blur">
-          <div className="max-w-4xl mx-auto px-4 py-4 flex items-center gap-3">
-            <BookOpen className="h-7 w-7 text-foreground" aria-hidden />
-            <Link href="/" className="font-semibold text-lg text-foreground hover:underline">
-              KJV Words
-            </Link>
-          </div>
-        </header>
-        <main className="flex-1 w-full">{children}</main>
-        <footer className="border-t border-foreground/10 py-6 text-center text-sm text-foreground/70">
-          <p>
-            &copy; {new Date().getFullYear()} KJV Words. Built for spreading words of truth.
-          </p>
-          <p className="mt-1">
-            KJV Bible &middot; 2 Timothy 2:15
-          </p>
-        </footer>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
+        <main className="min-h-screen w-full">{children}</main>
       </body>
     </html>
   );
